@@ -30,7 +30,7 @@ class ActivityController extends BaseController
 
 //        $model->save();
 
-        print_r($model->getErrors());exit;
+//        print_r($model->getErrors());exit;
 
         if(!$this->getRbac()->canViewActivity($model)){
             throw new HttpException(403,'not access view');
