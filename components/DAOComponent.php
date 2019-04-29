@@ -76,7 +76,6 @@ class DAOComponent extends Component
             $trans->rollBack();
 
         }
-
     }
 
     public function getAllUsers(){
