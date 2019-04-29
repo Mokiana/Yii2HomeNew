@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-6">
         <pre>
-            <?=print_r($model)?>
+            <?=print_r($model->file)?>
         </pre>
     </div>
 </div>
