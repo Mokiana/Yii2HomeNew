@@ -40,7 +40,6 @@ class Users extends UsersBase implements IdentityInterface
         return $this->email;
     }
 
-
     public function rules()
     {
         return array_merge([

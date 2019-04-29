@@ -32,12 +32,16 @@ class ActivityComponent extends Component
         return new $this->activity_class;
     }
 
+    /**
+     * @param $model Activity
+     * @return bool
+     */
     public function createActivity(&$model):bool{
 
         $model->file=$this->file_component->getUploadedFile($model,'file');
+        $model->user_id=\Yii::$app->user->id;
 
-        if(!$model->validate()){
-          //  print_r($model->GetErrors());
+        if(!$model->save()){
             return false;
         };
 
@@ -56,10 +60,10 @@ class ActivityComponent extends Component
                     $model->filename = $pathArray;
 
                 };
-
-
             }
         }
+
+
 
         return true;
     }

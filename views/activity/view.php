@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-md-6">
         <pre>
-            <?=print_r($model)?>
+            <?=print_r($model->getAttributes())?>
         </pre>
     </div>
 </div>

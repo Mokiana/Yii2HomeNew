@@ -17,6 +17,10 @@ $config = [
         '@new' => '@my/new/create'
     ],
     'components' => [
+        'authManager'=>[
+            'class'=>'\yii\rbac\DbManager',
+        ],
+        'rbac'=>['class'=>\app\components\RbacComponent::class],
         'activity' => ['class'=>\app\components\ActivityComponent::class, 'activity_class' => 'app\models\Activity'],
         'day' => ['class'=>\app\components\DayComponent::class, 'day_class' => 'app\models\Day'],
         'request' => [
